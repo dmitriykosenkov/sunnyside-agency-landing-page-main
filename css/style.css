@@ -245,18 +245,6 @@ body {
   z-index: 3;
 }
 
-.header__list::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  right: -13px;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid #fff;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
 @media (max-width: 768px) {
   .header__list {
     -webkit-box-orient: vertical;
@@ -271,6 +259,17 @@ body {
             justify-content: center;
     gap: 2rem;
     padding: 2rem;
+  }
+  .header__list::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -13px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
 }
 
