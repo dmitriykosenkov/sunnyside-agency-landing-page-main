@@ -568,7 +568,8 @@ body {
 
 .content__title {
   font-family: "Fraunces", sans-serif;
-  margin-bottom: 2.5rem;
+  font-weight: 900;
+  margin-bottom: calc(24px + (48 - 24) * ((100vw - 320px) / (1400 - 320)));
 }
 
 @media (max-width: 767px) {

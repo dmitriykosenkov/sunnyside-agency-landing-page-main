@@ -318,8 +318,9 @@ body {
    }
    &__title {
       font-family: $family-title;
+      font-weight: $fw-title-bold;
       @include adaptive-font(32, 24);
-      margin-bottom: 2.5rem;
+      margin-bottom: calc(24px + (48 - 24) * ((100vw - 320px) / (1400 - 320)));
    }
    &__text {
       @include adaptive-font(16, 12);
