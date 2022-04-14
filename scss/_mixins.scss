@@ -1,13 +1,21 @@
+$maxWidth: 1440;
 
-
+@mixin adaptive-value($property, $startSize, $minSize) {
+   $addSize: $startSize - $minSize;
+   #{$property}: calc(
+      #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
+   );
+}
 
 @mixin adaptive-font($pcSize, $mobSize) {
    $addSize: $pcSize - $mobSize;
    $addMobSize: $addSize + $addSize * 0.7;
-   @media (max-width:767px) {
-      font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / 1440));
-   } 
-   @media (min-width:767px) {
+   @media (max-width: 767px) {
+      font-size: calc(
+         #{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / 1440)
+      );
+   }
+   @media (min-width: 767px) {
       font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / 1440));
-   } 
+   }
 }

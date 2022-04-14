@@ -131,7 +131,7 @@ body {
 
 @media (max-width: 767px) {
   .fullscreen__title {
-    font-size: calc(32px + 27.2 * ((100vw - 320px) / 1440));
+    font-size: calc( 32px + 27.2 * ((100vw - 320px) / 1440));
   }
 }
 
@@ -245,6 +245,18 @@ body {
   z-index: 3;
 }
 
+.header__list::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -13px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #fff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 @media (max-width: 768px) {
   .header__list {
     -webkit-box-orient: vertical;
@@ -327,8 +339,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: calc(16px + (48 - 16) * ((100vw - 320px) / (1400 - 320)));
-  padding: calc(40px + (112 - 40) * ((100vw - 320px) / (1400 - 320))) calc(27px + (105 - 27) * ((100vw - 320px) / (1400 - 320)));
+  gap: calc( 16px + 32 * ((100vw - 320px) / 1120));
+  padding-top: calc( 40px + 72 * ((100vw - 320px) / 1120));
+  padding-bottom: calc( 40px + 72 * ((100vw - 320px) / 1120));
+  padding-left: calc( 27px + 78 * ((100vw - 320px) / 1120));
+  padding-right: calc( 27px + 78 * ((100vw - 320px) / 1120));
   position: relative;
   width: 100%;
 }
@@ -347,7 +362,7 @@ body {
 
 @media (max-width: 767px) {
   .about__title {
-    font-size: calc(24px + 40.8 * ((100vw - 320px) / 1440));
+    font-size: calc( 24px + 40.8 * ((100vw - 320px) / 1440));
   }
 }
 
@@ -370,7 +385,7 @@ body {
 
 @media (max-width: 767px) {
   .about__text {
-    font-size: calc(13px + 10.2 * ((100vw - 320px) / 1440));
+    font-size: calc( 13px + 10.2 * ((100vw - 320px) / 1440));
   }
 }
 
@@ -401,7 +416,7 @@ body {
 
 @media (max-width: 767px) {
   .about__link {
-    font-size: calc(12px + 6.8 * ((100vw - 320px) / 1440));
+    font-size: calc( 12px + 6.8 * ((100vw - 320px) / 1440));
   }
 }
 
@@ -414,7 +429,8 @@ body {
 .about__link a {
   position: relative;
   color: #23303e;
-  padding: 0 calc(5px + (8 - 5) * ((100vw - 768px) / (1400 - 768)));
+  padding-left: calc( 5px + 3 * ((100vw - 320px) / 1120));
+  padding-right: calc( 5px + 3 * ((100vw - 320px) / 1120));
 }
 
 .about__link span {
@@ -423,7 +439,7 @@ body {
   bottom: -2px;
   left: 0;
   height: 10px;
-  width: calc(115px + (150 - 115) * ((100vw - 320px) / (1400 - 320)));
+  width: calc( 115px + 35 * ((100vw - 320px) / 1120));
   opacity: 0.4;
   border-radius: 5px;
   -webkit-transition: all ease 0.3s;
@@ -569,12 +585,12 @@ body {
 .content__title {
   font-family: "Fraunces", sans-serif;
   font-weight: 900;
-  margin-bottom: calc(24px + (48 - 24) * ((100vw - 320px) / (1400 - 320)));
+  margin-bottom: calc( 24px + 24 * ((100vw - 320px) / 1120));
 }
 
 @media (max-width: 767px) {
   .content__title {
-    font-size: calc(24px + 13.6 * ((100vw - 320px) / 1440));
+    font-size: calc( 24px + 13.6 * ((100vw - 320px) / 1440));
   }
 }
 
@@ -591,7 +607,7 @@ body {
 
 @media (max-width: 767px) {
   .content__text {
-    font-size: calc(12px + 6.8 * ((100vw - 320px) / 1440));
+    font-size: calc( 12px + 6.8 * ((100vw - 320px) / 1440));
   }
 }
 
@@ -602,9 +618,9 @@ body {
 }
 
 .client {
+  padding-top: calc( 48px + 64 * ((100vw - 320px) / 1120));
+  padding-bottom: calc( 48px + 64 * ((100vw - 320px) / 1120));
   text-align: center;
-  padding-top: calc(48px + (112 - 48) * ((100vw - 320px) / (1400 - 320)));
-  padding-bottom: calc(48px + (112 - 48) * ((100vw - 320px) / (1400 - 320)));
   padding-left: 17px;
   padding-right: 17px;
   max-width: 100%;
@@ -672,7 +688,7 @@ body {
 
 @media (max-width: 767px) {
   .client__text {
-    font-size: calc(14px + 0 * ((100vw - 320px) / 1440));
+    font-size: calc( 14px + 0 * ((100vw - 320px) / 1440));
   }
 }
 
@@ -695,7 +711,7 @@ body {
 
 @media (max-width: 767px) {
   .client__post {
-    font-size: calc(12px + 3.4 * ((100vw - 320px) / 1440));
+    font-size: calc( 12px + 3.4 * ((100vw - 320px) / 1440));
   }
 }
 
@@ -807,7 +823,7 @@ body {
 
 @media (max-width: 767px) {
   .copy {
-    font-size: calc(10px + 6.8 * ((100vw - 320px) / 1440));
+    font-size: calc( 10px + 6.8 * ((100vw - 320px) / 1440));
   }
 }
 
